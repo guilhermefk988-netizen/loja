@@ -1,0 +1,357 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --branco: rgb(255, 255, 255);
+  --sombra: rgba(000, 000, 000, 0.3);
+}
+button {
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(-3px);
+}
+.header {
+  width: 100%;
+  height: 13vh;
+  background: rgb(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+
+  .nav__computador {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+      font-size: 1.3vw;
+    }
+        a:hover::after{
+        width: 100%;
+        }
+    a::after{
+      content: '';
+      width: 0%;
+      height: 10%;
+      position: absolute;
+      background: rgb(0, 102, 255);
+      bottom: 0;
+      left: 0;
+            transition: 0.5s;
+    }
+  }
+  .icones__header {
+    display: flex;
+    gap: 1rem;
+    img {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    img:hover {
+      background: rgb(255, 255, 255, 0.6);
+    }
+  }
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .imagem__fundo1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 2s;
+    }
+  }
+
+  .posisão__texto {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Meus__textos {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h1 {
+      font-family: "Bodoni Moda", serif;
+      width: clamp(20rem,60vw, 80rem);
+      font-size: clamp(2rem,6vw,10rem);
+      line-height: clamp(2rem,6vw,10rem);
+    }
+    p {
+      font-size: clamp(0.8rem,1.5vw,2.5rem);
+      letter-spacing: 0.2rem;
+      width: clamp(20rem,60vw, 80rem);
+    }
+  }
+  button {
+    background: rgb(221, 207, 207, 0.5);
+    width: clamp(7rem,15vw, 20rem);
+    height: 6vh;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    font-size: clamp(0.7rem,1.1vw,2rem);
+    margin-top: 2rem;
+    box-shadow: 0 0 15px var(--sombra);
+    letter-spacing: 0.02rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    background: black;
+    transition: 0.6s;
+    z-index: -1;
+  }
+  button:hover::after {
+    height: 100%;
+  }
+  button:hover {
+    color: rgb(221, 207, 207, 0.5);
+  }
+  button::before {
+    content: "→";
+    position: absolute;
+    right: 10%;
+    opacity: 0;
+  }
+  button:hover::before {
+    opacity: 1;
+  }
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .fundo2{
+    width:  100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .Meu__3D.ativo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 2;
+
+    .O__3D {
+      width: 40vw;
+      height: 40vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+      transform: translate(25vw, -100vh);
+    }
+    img{
+      opacity: 1;
+            transform: translateY(0vh);
+            transition: 1s;
+    }
+  }
+  .Meu__3D {
+    width: 100%;
+    height: 100%;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    
+
+    .O__3D {
+      transform: translate(125vw);
+      transition: 0.5s;
+    }
+    img {
+      width: 20vw;
+      height: auto;
+      opacity: 0;
+      
+      transform: translateY(30vh);
+    }
+    
+    
+  }.modelos__indicadores {
+      width: 100%;
+      height: 20vh;
+      background: rgb(255, 235, 205, 0.5);
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      flex-direction: column;
+    }
+  .setas {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 30;
+      
+
+      button {
+        background: rgb(255, 255, 255, 0.5);
+        border-radius: 50%;
+        border:
+       solid var(--branco),
+       1px;
+      }
+    }
+    .barras{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .numeros{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .barra{
+      width: 5vw;
+      height: 0.9vh;
+      background: black;
+    }
+    .barra.ativo{
+      background: var(--branco);
+    }
+}
+.Produtos__loja {
+  width: 100%;
+  height: 100vh;
+background: #E8D8C3;
+
+.Filtros{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botoes{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+
+  button{
+    font-size: 1.2vw;
+    padding:  0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background: rgb(255, 228, 228);
+    box-shadow: 0 0 10px var(--sombra);
+  }
+}
+.Meus__produtos{
+  width: 100%;
+  height: 90%;
+    display: grid;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  grid-template-columns: repeat(4, 20%);
+  gap: 0 1rem;
+}
+  .produto {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: burlywood;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .imagem__produto{
+    width: 100%;
+    height: 70%;
+    background: green;
+    border-radius: 10px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .conteudo__produto{
+    width: 100%;
+    height: 30%;
+    background: red;
+  }
+  .botao.ativo{
+background: rgb(94, 46, 11);
+color: var(--branco);
+  }
+}
