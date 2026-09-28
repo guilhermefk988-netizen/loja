@@ -5,7 +5,7 @@ import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 const container = document.querySelector('.O__3D.um');
 
 const roupas = [
-    { modelo: "./modelos3D/camisa.glb" },
+    { modelo: "./modelos3D/camisa-v4.glb" },
     { modelo: "./modelos3D/sapato-v1.glb" },
     { modelo: "./modelos3D/calça.glb" },
 ];
