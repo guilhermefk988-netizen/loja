@@ -7,7 +7,7 @@ const container = document.querySelector('.O__3D.um');
 const roupas = [
     { modelo: "./modelos3D/camisa.glb" },
     { modelo: "./modelos3D/sapato-v1.glb" },
-    { modelo: "./modelos3D/bermuda.glb" },
+    { modelo: "./modelos3D/calça.glb" },
 ];
 
 const cena = new THREE.Scene();
@@ -81,20 +81,31 @@ function trocarSlide(novoNumero) {
 const passar = document.querySelector('.passar');
 const volta = document.querySelector('.voltar');
 const meuSlides = document.querySelectorAll('.Meu__3D')
+const barras = document.querySelectorAll('.barra')
+
 
 passar.addEventListener('click', () => {
     trocarSlide((numero + 1) % roupas.length);
 const slidAtivo = document.querySelector('.Meu__3D.ativo')
 slidAtivo.classList.remove('ativo')
+const barraAtiva = document.querySelector('.barra.ativo')
+barraAtiva.classList.remove('ativo')
 
+barras[numero].classList.add('ativo')
 meuSlides[numero].classList.add('ativo')
+document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
+
 });
 
 volta.addEventListener('click', () => {
     trocarSlide((numero - 1 + roupas.length) % roupas.length);
     const slidAtivo = document.querySelector('.Meu__3D.ativo')
 slidAtivo.classList.remove('ativo')
+const barraAtiva = document.querySelector('.barra.ativo')
+barraAtiva.classList.remove('ativo')
 
+barras[numero].classList.add('ativo')
+document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
 meuSlides[numero].classList.add('ativo')
 });
 
@@ -110,7 +121,7 @@ gsap.registerPlugin(ScrollTrigger)
 
   scrollTrigger:{
     scrub: 0.5,
-    markers: true,
+    //markers: true,
     top: '10% 50%',
     end: '20% 40%',
   }
