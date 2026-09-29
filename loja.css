@@ -49,18 +49,18 @@ button:active {
       transition: 0.3s;
       font-size: 1.3vw;
     }
-        a:hover::after{
-        width: 100%;
-        }
-    a::after{
-      content: '';
+    a:hover::after {
+      width: 100%;
+    }
+    a::after {
+      content: "";
       width: 0%;
       height: 10%;
       position: absolute;
       background: rgb(0, 102, 255);
       bottom: 0;
       left: 0;
-            transition: 0.5s;
+      transition: 0.5s;
     }
   }
   .icones__header {
@@ -109,26 +109,26 @@ button:active {
 
     h1 {
       font-family: "Bodoni Moda", serif;
-      width: clamp(20rem,60vw, 80rem);
-      font-size: clamp(2rem,6vw,10rem);
-      line-height: clamp(2rem,6vw,10rem);
+      width: clamp(20rem, 60vw, 80rem);
+      font-size: clamp(2rem, 6vw, 10rem);
+      line-height: clamp(2rem, 6vw, 10rem);
     }
     p {
-      font-size: clamp(0.8rem,1.5vw,2.5rem);
+      font-size: clamp(0.8rem, 1.5vw, 2.5rem);
       letter-spacing: 0.2rem;
-      width: clamp(20rem,60vw, 80rem);
+      width: clamp(20rem, 60vw, 80rem);
     }
   }
   button {
     background: rgb(221, 207, 207, 0.5);
-    width: clamp(7rem,15vw, 20rem);
+    width: clamp(7rem, 15vw, 20rem);
     height: 6vh;
     border: none;
     border-radius: 5px;
     position: relative;
     cursor: pointer;
     z-index: 2;
-    font-size: clamp(0.7rem,1.1vw,2rem);
+    font-size: clamp(0.7rem, 1.1vw, 2rem);
     margin-top: 2rem;
     box-shadow: 0 0 15px var(--sombra);
     letter-spacing: 0.02rem;
@@ -167,12 +167,12 @@ button:active {
   height: 100vh;
   position: relative;
 
-  .fundo2{
-    width:  100%;
+  .fundo2 {
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
@@ -189,139 +189,142 @@ button:active {
     z-index: 2;
 
     .O__3D {
-      width: 40vw;
-      height: 40vw;
+      width: clamp(20rem,40vw,50rem);
+      height: clamp(20rem,40vw,50rem);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: 0.5s;
       transform: translate(25vw, -100vh);
     }
-    img{
+    img {
       opacity: 1;
-            transform: translateY(0vh);
-            transition: 1s;
+      transform: translateY(0vh);
+      transition: 1s;
     }
   }
   .Meu__3D {
     width: 100%;
     height: 100%;
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     left: 0;
     top: 0;
     transition: 0.5s;
-    
 
     .O__3D {
       transform: translate(125vw);
       transition: 0.5s;
     }
     img {
-      width: 20vw;
+      width: clamp(10rem,20vw,25rem);
       height: auto;
       opacity: 0;
-      
+
       transform: translateY(30vh);
     }
-    
-    
-  }.modelos__indicadores {
-      width: 100%;
-      height: 20vh;
-      background: rgb(255, 235, 205, 0.5);
-      position: absolute;
-      bottom: 0;
-      z-index: 4;
-      flex-direction: column;
-    }
+  }
+  .modelos__indicadores {
+    width: 100%;
+    height: 20vh;
+    background: rgb(255, 235, 205, 0.5);
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    flex-direction: column;
+  }
   .setas {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 30;
-      
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 30;
 
-      button {
-        background: rgb(255, 255, 255, 0.5);
-        border-radius: 50%;
-        border:
-       solid var(--branco),
-       1px;
-      }
+    button {
+      background: rgb(255, 255, 255, 0.5);
+      width:  clamp(3rem,4vw,6rem);
+      height: clamp(3rem,4vw,6rem);
+      border-radius: 50%;
+      border:
+        solid var(--branco),
+        1px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
     }
-    .barras{
-      width: 100%;
-      height: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .numeros{
-      width: 100%;
-      height: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4vw;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .barra{
-      width: 5vw;
-      height: 0.9vh;
-      background: black;
-    }
-    .barra.ativo{
-      background: var(--branco);
-    }
+  }
+  .barras {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .numeros {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3rem,4vw, 5rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .barra {
+    width: clamp(3rem,5vw,8rem);
+    height: 0.9vh;
+    background: black;
+  }
+  .barra.ativo {
+    background: var(--branco);
+  }
 }
 .Produtos__loja {
   width: 100%;
   height: 100vh;
-background: #E8D8C3;
+  background: #e8d8c3;
 
-.Filtros{
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.botoes{
-  width: 85%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  z-index: 10;
-
-  button{
-    font-size: 1.2vw;
-    padding:  0.5rem 1rem;
-    border-radius: 10px;
-    border: none;
-    background: rgb(255, 228, 228);
-    box-shadow: 0 0 10px var(--sombra);
+  .Filtros {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
-.Meus__produtos{
-  width: 100%;
-  height: 90%;
+  .botoes {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    position: relative;
+    z-index: 10;
+
+    button {
+      font-size: clamp(0.5rem,1.2vw,2rem);
+      padding: clamp(0.4rem,0.6vw,1rem) clamp(0.5rem,1vw,2rem);
+      border-radius: clamp(0.4rem,0.7vw,1rem);
+      border: none;
+      background: rgb(255, 228, 228);
+      box-shadow: 0 0 10px var(--sombra);
+    }
+  }
+  .Meus__produtos {
+    width: 100%;
+    height: 90%;
     display: grid;
-  align-items: center;
-  justify-content: center;
-  place-items: center;
-  grid-template-columns: repeat(4, 20%);
-  gap: 0 1rem;
-}
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(4, 20%);
+    gap: 0 1rem;
+  }
   .produto {
     width: 100%;
     height: 35vh;
@@ -330,28 +333,94 @@ background: #E8D8C3;
     justify-content: center;
     background: burlywood;
     border-radius: 10px;
-    box-shadow: var(--sombra);
+    box-shadow: 0 0 15px var(--sombra);
     flex-direction: column;
     overflow: hidden;
   }
-  .imagem__produto{
+  .imagem__produto {
     width: 100%;
     height: 70%;
     background: green;
     border-radius: 10px;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  .conteudo__produto{
+  .carrinho__icone {
+    width: clamp(2rem,3vw, 5rem);
+    height: clamp(2rem,3vw, 5rem);
+    border-radius: 50%;
+    border: solid rgb(94, 46, 11) 1px;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .carrinho__icone:active {
+    transform: translateY(-3px);
+  }
+  .conteudo__produto {
     width: 100%;
     height: 30%;
+    position: relative;
     background: rgb(255, 235, 235);
+    padding: 0 1rem;
+
+    h4 {
+      font-size: clamp(0.9rem, 1.2vw, 2rem);
+      font-weight: 400;
+    }
+    p {
+      font-size: clamp(0.7rem,1.2vw,3rem);
+      font-weight: 700;
+    }
+    h3 {
+      font-size: clamp(0.7rem,1.2vw,2rem);
+      font-weight: 500;
+    }
   }
-  .botao.ativo{
-background: rgb(94, 46, 11);
-color: var(--branco);
+  .produto:hover{
+    transform: translateY(-3px);
   }
+  .botao.ativo {
+    background: rgb(94, 46, 11);
+    color: var(--branco);
+  }
+}
+
+@media (max-width: 760px) {
+  .Produtos__loja{
+        height: auto;
+        padding-bottom: 5vh;
+        
+  .Meus__produtos {
+    padding-top: 3vh;
+    grid-template-columns: repeat(3, 30%);
+    gap: 1rem;
+  }
+  .Filtros{
+height: 10vh;
+  }}
+}
+@media (max-width: 550px) {
+  .Produtos__loja{
+        height: auto;
+        padding-bottom: 5vh;
+
+  .Meus__produtos {
+    grid-template-columns: repeat(2, 45%);
+  }
+  .Filtros{
+height: 10vh;
+  }}
+}
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background: red;
 }
