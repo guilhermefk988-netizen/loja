@@ -89,7 +89,7 @@ button:active {
     img {
       width: 100%;
       height: 100%;
-      transition: 2s;
+      object-fit: cover;
     }
   }
 
@@ -175,6 +175,7 @@ button:active {
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -189,8 +190,8 @@ button:active {
     z-index: 2;
 
     .O__3D {
-      width: clamp(20rem,40vw,50rem);
-      height: clamp(20rem,40vw,50rem);
+      width: clamp(20rem, 40vw, 50rem);
+      height: clamp(20rem, 40vw, 50rem);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -219,7 +220,7 @@ button:active {
       transition: 0.5s;
     }
     img {
-      width: clamp(10rem,20vw,25rem);
+      width: clamp(10rem, 20vw, 25rem);
       height: auto;
       opacity: 0;
 
@@ -233,7 +234,6 @@ button:active {
     position: absolute;
     bottom: 0;
     z-index: 4;
-    flex-direction: column;
   }
   .setas {
     width: 100%;
@@ -247,16 +247,14 @@ button:active {
 
     button {
       background: rgb(255, 255, 255, 0.5);
-      width:  clamp(3rem,4vw,6rem);
-      height: clamp(3rem,4vw,6rem);
+      width: clamp(3rem, 4vw, 6rem);
+      height: clamp(3rem, 4vw, 6rem);
       border-radius: 50%;
-      border:
-        solid var(--branco),
-        1px;
-        img{
-          width: 100%;
-          height: 100%;
-        }
+      border: solid var(--branco) 1px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   .barras {
@@ -273,11 +271,11 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(3rem,4vw, 5rem);
+    font-size: clamp(3rem, 4vw, 5rem);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .barra {
-    width: clamp(3rem,5vw,8rem);
+    width: clamp(3rem, 5vw, 8rem);
     height: 0.9vh;
     background: black;
   }
@@ -307,9 +305,9 @@ button:active {
     z-index: 10;
 
     button {
-      font-size: clamp(0.5rem,1.2vw,2rem);
-      padding: clamp(0.4rem,0.6vw,1rem) clamp(0.5rem,1vw,2rem);
-      border-radius: clamp(0.4rem,0.7vw,1rem);
+      font-size: clamp(0.5rem, 1.2vw, 2rem);
+      padding: clamp(0.4rem, 0.6vw, 1rem) clamp(0.5rem, 1vw, 2rem);
+      border-radius: clamp(0.4rem, 0.7vw, 1rem);
       border: none;
       background: rgb(255, 228, 228);
       box-shadow: 0 0 10px var(--sombra);
@@ -336,6 +334,7 @@ button:active {
     box-shadow: 0 0 15px var(--sombra);
     flex-direction: column;
     overflow: hidden;
+    transition: 0.3s;
   }
   .imagem__produto {
     width: 100%;
@@ -349,8 +348,8 @@ button:active {
     }
   }
   .carrinho__icone {
-    width: clamp(2rem,3vw, 5rem);
-    height: clamp(2rem,3vw, 5rem);
+    width: clamp(2rem, 3vw, 5rem);
+    height: clamp(2rem, 3vw, 5rem);
     border-radius: 50%;
     border: solid rgb(94, 46, 11) 1px;
     position: absolute;
@@ -376,15 +375,15 @@ button:active {
       font-weight: 400;
     }
     p {
-      font-size: clamp(0.7rem,1.2vw,3rem);
+      font-size: clamp(0.7rem, 1.2vw, 3rem);
       font-weight: 700;
     }
     h3 {
-      font-size: clamp(0.7rem,1.2vw,2rem);
+      font-size: clamp(0.7rem, 1.2vw, 2rem);
       font-weight: 500;
     }
   }
-  .produto:hover{
+  .produto:hover {
     transform: translateY(-3px);
   }
   .botao.ativo {
@@ -394,33 +393,110 @@ button:active {
 }
 
 @media (max-width: 760px) {
-  .Produtos__loja{
-        height: auto;
-        padding-bottom: 5vh;
-        
-  .Meus__produtos {
-    padding-top: 3vh;
-    grid-template-columns: repeat(3, 30%);
-    gap: 1rem;
+  .Produtos__loja {
+    height: auto;
+    padding-bottom: 5vh;
+
+    .Meus__produtos {
+      padding-top: 3vh;
+      grid-template-columns: repeat(3, 30%);
+      gap: 1rem;
+    }
+    .Filtros {
+      height: 10vh;
+    }
   }
-  .Filtros{
-height: 10vh;
-  }}
 }
 @media (max-width: 550px) {
-  .Produtos__loja{
-        height: auto;
-        padding-bottom: 5vh;
+  .Produtos__loja {
+    height: auto;
+    padding-bottom: 5vh;
 
-  .Meus__produtos {
-    grid-template-columns: repeat(2, 45%);
+    .Meus__produtos {
+      grid-template-columns: repeat(2, 45%);
+    }
+    .Filtros {
+      height: 10vh;
+    }
   }
-  .Filtros{
-height: 10vh;
-  }}
 }
 .section2 {
   width: 100%;
   height: 100vh;
-  background: red;
+  background: #e8d8c3;
+
+  display: flex;
+
+  .sobre__nos {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imagens__sobreNOS {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-right: 1.5rem;
+
+    .imagem__grande {
+      width: 60%;
+      height: 80%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .imagens__pequenas {
+      width: 40%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .imagem__pequena {
+        width: 100%;
+        height: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .texto__sobreNOS {
+    width: 90%;
+    height: 70%;
+
+    h3 {
+      font-family: "Bodoni Moda", serif;
+    }
+    h2 {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(2rem,4.6vw,5.5rem);
+      width: clamp(20rem,43vw,50rem);
+      line-height: clamp(2rem, 6vw, 10rem);
+    }
+  }
+}
+
+
+@media (max-width: 550px) {
+  .section2{
+    flex-direction: column;
+.sobre__nos{
+  width: 100%;
+}
+    .imagens__sobreNOS{
+      width: 100%;
+padding-left: 1rem;
+    }
+  }
 }

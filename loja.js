@@ -86,43 +86,43 @@ const barras = document.querySelectorAll('.barra')
 
 passar.addEventListener('click', () => {
     trocarSlide((numero + 1) % roupas.length);
-const slidAtivo = document.querySelector('.Meu__3D.ativo')
-slidAtivo.classList.remove('ativo')
-const barraAtiva = document.querySelector('.barra.ativo')
-barraAtiva.classList.remove('ativo')
+    const slidAtivo = document.querySelector('.Meu__3D.ativo')
+    slidAtivo.classList.remove('ativo')
+    const barraAtiva = document.querySelector('.barra.ativo')
+    barraAtiva.classList.remove('ativo')
 
-barras[numero].classList.add('ativo')
-meuSlides[numero].classList.add('ativo')
-document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
+    barras[numero].classList.add('ativo')
+    meuSlides[numero].classList.add('ativo')
+    document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
 
 });
 
 volta.addEventListener('click', () => {
     trocarSlide((numero - 1 + roupas.length) % roupas.length);
     const slidAtivo = document.querySelector('.Meu__3D.ativo')
-slidAtivo.classList.remove('ativo')
-const barraAtiva = document.querySelector('.barra.ativo')
-barraAtiva.classList.remove('ativo')
+    slidAtivo.classList.remove('ativo')
+    const barraAtiva = document.querySelector('.barra.ativo')
+    barraAtiva.classList.remove('ativo')
 
-barras[numero].classList.add('ativo')
-document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
-meuSlides[numero].classList.add('ativo')
+    barras[numero].classList.add('ativo')
+    document.querySelector('.numeros').innerHTML = '0' + (numero + 1)
+    meuSlides[numero].classList.add('ativo')
 });
 
 
 gsap.registerPlugin(ScrollTrigger)
- document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger)
- });
+document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger)
+});
 
- gsap.to(container,{
+gsap.to(container, {
     x: 0,
-  y: 0,
+    y: 0,
 
-  scrollTrigger:{
-    scrub: 0.5,
-    //markers: true,
-    top: '10% 50%',
-    end: '20% 40%',
-  }
- })
+    scrollTrigger: {
+        scrub: 0.5,
+        //markers: true,
+        top: '10% 50%',
+        end: '20% 40%',
+    }
+})
