@@ -474,28 +474,41 @@ button:active {
   .texto__sobreNOS {
     width: 90%;
     height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem,1vw,2rem);
 
     h3 {
       font-family: "Bodoni Moda", serif;
+      font-size: clamp(1.3rem,2vw,3rem);
     }
     h2 {
       font-family: "Bodoni Moda", serif;
       font-size: clamp(2rem,4.6vw,5.5rem);
       width: clamp(20rem,43vw,50rem);
-      line-height: clamp(2rem, 6vw, 10rem);
+      line-height: clamp(2rem, 5.5vw, 10rem);
+    }
+    P{
+            font-size: clamp(0.8rem, 1.5vw, 2.5rem);
+      letter-spacing: 0.2rem;
+      width: clamp(20rem, 39vw, 80rem);
+    text-align: justify;
+
     }
   }
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .section2{
     flex-direction: column;
 .sobre__nos{
   width: 100%;
+  height: 50%;
 }
     .imagens__sobreNOS{
       width: 100%;
+        height: 50%;
 padding-left: 1rem;
     }
   }
